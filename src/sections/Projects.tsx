@@ -21,6 +21,7 @@ const Projects = () => {
   if (isInView) controls.start('visible');
 
   useEffect(() => {
+    setIsGitHubMode(false);
     if (isGitHubMode && githubProjects.length === 0) {
       fetchGitHubProjects();
     }
